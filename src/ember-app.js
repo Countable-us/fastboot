@@ -322,6 +322,8 @@ class EmberApp {
     }
 
     try {
+      debug(`visit(): hostname=${req.hostname}, buildSandboxPerVisit=${buildSandboxPerVisit}`);
+
       await this._visit(path, fastbootInfo, bootOptions, result, buildSandboxPerVisit);
 
       if (!disableShoebox) {
